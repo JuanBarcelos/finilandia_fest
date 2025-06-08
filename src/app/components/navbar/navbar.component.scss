@@ -1,0 +1,57 @@
+.navbar {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3.2rem;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+
+        .navbar-menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+
+            .navbar-item {
+                &:hover {
+                    padding-bottom: 0.8rem;
+                    border-bottom: 2px solid #5c8bfa;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-family: "Open Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%; /* 1.875rem */
+                    cursor: pointer;
+                }
+            }
+
+            .active{
+                padding-bottom: 0.8rem;
+                border-bottom: 2px solid #5c8bfa;
+
+                a {
+                    color: #5c8bfa;
+                }
+            }
+        }
+    }
+
+    .navbar-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+    }
+
+}

@@ -44,6 +44,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.span-title{
+    font-family: "Baloo Thambi 2", system-ui;
+    color: #6E99FD;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+    letter-spacing: .24rem;
+    text-transform: uppercase;
+}
+.section-title{
+    font-family: "Baloo Thambi 2", system-ui;
+    color: #333;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110%; /* 52.8px */
+    text-transform: uppercase;
+}
+.section-description{
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: .24rem;
+    b {
+        color: #6E99FD;
+        font-weight: 700;
+        line-height: 180%;
+    }
+}
+
 @media screen and (600px < width < 900px ) {
 
 }

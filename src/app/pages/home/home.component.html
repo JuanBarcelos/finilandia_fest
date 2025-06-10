@@ -1,17 +1,39 @@
 <main>
-    <section class="hero">
+    <section class="hero-section">
         <div class="warpper">
             <app-navbar></app-navbar>
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1>A barraca mais doce da festa chegou!</h1>
-                    <p>
+                    <h1 class="section-title">A barraca mais doce da festa chegou!</h1>
+                    <p class="section-description">
                         Surpreenda seus convidados com uma explosão de cores, sabores e alegria com nossas <b> barracas exclusivas de Balas Fini! </b>
                     </p>
                     <!-- <a href="" class="btn">Learn More</a> -->
                     <app-primary-button label="Bora de Fini!"></app-primary-button>
                 </div>
                 <img class="hero-image" src="home/hero-section.svg" alt="doces fini">
+            </div>
+        </div>
+    </section>
+    <section class="event-section">
+        <div class="warpper">
+            <div class="event-container">
+                <div class="event-content">
+                    <span class="span-title">Tem Fini Chegando Perto de Você!</span>
+                    <h2 class="section-title">A Barraca Que Vira Ponto de Encontro!</h2>
+                    <p class="section-description">
+                        Seja em aniversários, casamentos ou eventos corporativos, nossa barraca de Balas Fini é a estrela que conquista adultos e crianças! Quer ver de perto essa explosão de alegria?
+                        <b>Confira os próximos eventos ou fale com a gente e leve essa delícia pro seu também!</b>
+                    </p>
+                    <div class="event-calendar">
+                        <app-event-card></app-event-card>
+                        <app-event-card></app-event-card>
+                        <app-event-card></app-event-card>
+                        <app-event-card></app-event-card>
+                    </div>
+                    <app-primary-button label=" Próximas Paradas!" icon="map-pin"></app-primary-button>
+                </div>
+                <img class="event-image" src="home/event-section.svg" alt="balas fini">
             </div>
         </div>
     </section>

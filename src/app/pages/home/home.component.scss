@@ -1,11 +1,10 @@
-.hero{
+.warpper {
+    max-width: 121.6rem;
+    margin: 0 auto;
+}
+.hero-section{
     background-color: #FDD26E;
     height: 100vh;
-
-    .warpper {
-        max-width: 121.6rem;
-        margin: 0 auto;
-    }
 
     .hero-container{
         display: flex;
@@ -16,35 +15,53 @@
         .hero-content{
             color:#333;
             h1 {
-                font-family: "Baloo Thambi 2", system-ui;
-                font-optical-sizing: auto;
-                font-size: 4.8rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 110%; /* 3.3rem */
-                text-transform: uppercase;
                 width: 52rem;
             }
 
             p{
-                font-family: "Open Sans", sans-serif;
-                font-optical-sizing: auto;
-                font-size: 2.4rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%; /* 3.3rem */
-
                 margin-top: 1.6rem;
                 margin-bottom: 3.2rem;
-
-                b {
-                    color: #5c8bfa;
-                }
             }
         }
 
         .hero-image{
             width: 90rem;
+        }
+    }
+}
+
+.event-section{
+    background-color: #f5f5f5;
+    height: 100vh;
+    position: relative;
+
+    .event-container{
+        padding-block: 7.9rem;
+
+        .event-content{
+            width: 86.2rem;
+            margin-top: 12.35rem;
+            h2{
+                margin-block: 1.6rem;
+            }
+
+            .event-calendar{
+                display: flex;
+                width: 69.6rem;
+                padding: 0 1.6rem;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-content: flex-start;
+                row-gap: 3.2rem;
+                flex-wrap: wrap;
+
+                margin-block: 3.2rem;
+            }
+        }
+        .event-image{
+            position: absolute;
+            right: 3.2rem;
+            top: 7.9rem;
         }
     }
 }

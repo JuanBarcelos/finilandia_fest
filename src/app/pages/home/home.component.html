@@ -64,4 +64,25 @@
             </div>
         </div>
     </section>
+    <section class="benefits-section">
+        <div class="warpper">
+            <div class="benefits-container">
+                <img class="benefits-image" src="home/benefits/benefits-section.svg" alt="balas fini">
+                <div class="benefits-content">
+                    <div class="benefits-header">
+                        <span class="span-title">Mais que uma barraca, uma experiência!</span>
+                        <h2 class="section-title">Por que a nossa barraca é o destaque da festa?</h2>
+                        <p class="section-description">
+                            Não é só uma barraca de doces, é uma experiência que encanta crianças e adultos! Descubra por que a nossa estrutura é sempre um sucesso nas festas mais animadas da cidade:
+                        </p>
+                    </div>
+                    <div class="benefits-cards">
+                        @for (benefit of benefits; track $index) {
+                            <app-benefit-card [benefit]="benefit"></app-benefit-card>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>

@@ -5,10 +5,11 @@ import { EventCardComponent } from "../../components/event-card/event-card.compo
 import { BenefitCardComponent } from "../../components/benefit-card/benefit-card.component";
 import type { Benefit } from '../../interfaces/benefit';
 import { CarouselComponent } from "../../components/carousel/carousel.component";
+import { FaqsComponent } from "../../components/faqs/faqs.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent],
+  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent, FaqsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -1,0 +1,15 @@
+<div class="container">
+    @for (faq of faqs; track $index) {
+        <div class="faqs">
+            <div class="faq-title">
+                <p>{{faq.title}}</p>
+                <div class="btn-faq" (click)="toggleFaq($index)">
+                    <i [class]="!openedFaqs[$index] ? plus : minus"></i>
+                </div>
+            </div>
+            @if(openedFaqs[$index]) {
+                <p>{{faq.describe}}</p>
+            }
+        </div>
+    }
+</div>

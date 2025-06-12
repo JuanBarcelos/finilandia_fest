@@ -1,0 +1,38 @@
+<div class="carousel-container">
+    <div class="carousel-wrapper"  [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+        @for (groupedTestimonial of groupedTestimonials; track $index) {
+            <div class="carousel-slide">
+                @for (testimonial of groupedTestimonial; track $index) {
+                    <div class="carousel-item">
+                        <img class="carousel-image" [src]="testimonial.imageUrl" alt="{{ testimonial.title }}">
+                        <div class="carousel-title">
+                            <h3>{{ testimonial.name }}</h3>
+                            <h4>{{ testimonial.title }}</h4>
+                        </div>
+                        <p>{{ testimonial.text }}</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="carousel-controls">
+        <app-btn-social-networks
+            icon="caret-left"
+            (click)="prevSlide()"
+            [disabled]="currentIndex === 0"
+        ></app-btn-social-networks>
+        <span
+            *ngFor="let t of groupedTestimonials; let i = index"
+            [class.active]="i === currentIndex"
+            class="bar"
+        >
+        </span>
+        <app-btn-social-networks
+            icon="caret-right"
+            (click)="nextSlide()"
+            [disabled]="currentIndex === groupedTestimonials.length - 1"
+        ></app-btn-social-networks>
+    </div>
+</div>
+

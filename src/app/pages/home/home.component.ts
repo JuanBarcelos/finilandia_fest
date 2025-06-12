@@ -4,10 +4,11 @@ import { PrimaryButtonComponent } from "../../components/primary-button/primary-
 import { EventCardComponent } from "../../components/event-card/event-card.component";
 import { BenefitCardComponent } from "../../components/benefit-card/benefit-card.component";
 import type { Benefit } from '../../interfaces/benefit';
+import { CarouselComponent } from "../../components/carousel/carousel.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent],
+  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

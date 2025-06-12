@@ -67,7 +67,7 @@
     }
 }
 
-.cta-section{
+.cta-section, .cta2-section{
     background-color: #f5f5f5;
 
     display: flex;
@@ -97,6 +97,10 @@
             margin-bottom: 3.2rem;
         }
     }
+}
+
+.cta2-section{
+    background: #FDD26E;
 }
 
 .about-section {

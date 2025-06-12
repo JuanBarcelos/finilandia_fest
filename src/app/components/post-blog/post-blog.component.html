@@ -1,0 +1,10 @@
+<div class="container">
+    @for (post of posts; track $index) {
+        <div class="post">
+            <img [src]="post.imageUrl" alt="{{post.title}}">
+            <h3>{{post.title}}</h3>
+            <p>{{post.text}}</p>
+            <span>{{post.date}}</span>
+        </div>
+    }
+</div>

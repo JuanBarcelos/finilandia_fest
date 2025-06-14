@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="contactForm">
+        <div class="form-group">
+            <div class="input-group">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" formControlName="name">
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" formControlName="email">
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Telefone</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" formControlName="phoneNumber">
+            </div>
+            <div class="input-group">
+                <label for="about">Assunto</label>
+                <input type="text" name="about" id="about" formControlName="about">
+            </div>
+            <div class="input-group">
+                <label for="message">Mensagem</label>
+                <textarea name="message" id="message" formControlName="message"></textarea>
+            </div>
+        </div>
+        <button class="btn-submit" (click)="onSubmit()" [disabled]="contactForm.invalid">
+            <i class="ph-fill ph-arrow-circle-right"></i>
+            Enviar mensagem
+        </button>
+    </form>
+</div>

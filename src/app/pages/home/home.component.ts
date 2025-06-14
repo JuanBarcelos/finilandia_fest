@@ -7,10 +7,11 @@ import type { Benefit } from '../../interfaces/benefit';
 import { CarouselComponent } from "../../components/carousel/carousel.component";
 import { FaqsComponent } from "../../components/faqs/faqs.component";
 import { PostBlogComponent } from "../../components/post-blog/post-blog.component";
+import { FormContactComponent } from "../../components/form-contact/form-contact.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent, FaqsComponent, PostBlogComponent],
+  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent, FaqsComponent, PostBlogComponent, FormContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

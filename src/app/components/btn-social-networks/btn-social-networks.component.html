@@ -1,3 +1,9 @@
 <button [disabled]=disabled>
-   <i class="ph ph-{{icon}}"></i>
+    <img src="{{imageURL}}" alt="{{imageAlt}}">
+    @if (classIcon) {
+        <i class="ph ph-{{icon}} {{classColor}}"></i>
+    }
+    @else {
+        <i class="ph ph-{{icon}}"></i>
+    }
 </button>

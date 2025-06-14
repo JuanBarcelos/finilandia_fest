@@ -9,4 +9,8 @@ import { Component, Input } from '@angular/core';
 export class BtnSocialNetworksComponent {
    @Input() icon: string = '';
    @Input() disabled: boolean = false;
+   @Input() imageURL: string = '';
+   @Input() imageAlt: string = '';
+   @Input() classColor: string = '';
+   @Input() classIcon: boolean = false;
 }

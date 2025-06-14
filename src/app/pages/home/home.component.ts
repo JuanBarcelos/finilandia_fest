@@ -3,19 +3,27 @@ import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { PrimaryButtonComponent } from "../../components/primary-button/primary-button.component";
 import { EventCardComponent } from "../../components/event-card/event-card.component";
 import { BenefitCardComponent } from "../../components/benefit-card/benefit-card.component";
-import type { Benefit } from '../../interfaces/benefit';
+import { Benefit } from '../../interfaces/benefit';
 import { CarouselComponent } from "../../components/carousel/carousel.component";
 import { FaqsComponent } from "../../components/faqs/faqs.component";
 import { PostBlogComponent } from "../../components/post-blog/post-blog.component";
 import { FormContactComponent } from "../../components/form-contact/form-contact.component";
+import { FooterComponent } from "../../components/footer/footer.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent, FaqsComponent, PostBlogComponent, FormContactComponent],
+  imports: [NavbarComponent, PrimaryButtonComponent, EventCardComponent, BenefitCardComponent, CarouselComponent, FaqsComponent, PostBlogComponent, FormContactComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+    constructor( private route: Router) { }
+
+    goToBlog() {
+        this.route.navigate(['/blog']);
+    };
+
     benefits: Benefit[] = [
         {
             title: 'Montagem Rápida',

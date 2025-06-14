@@ -1,7 +1,9 @@
 <main>
     <section class="hero-section">
         <div class="warpper">
-            <app-navbar></app-navbar>
+            <header>
+                <app-navbar></app-navbar>
+            </header>
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="section-title">A barraca mais doce da festa chegou!</h1>
@@ -15,7 +17,7 @@
             </div>
         </div>
     </section>
-    <section class="event-section">
+    <section id="event" class="event-section">
         <div class="warpper">
             <div class="event-container">
                 <div class="event-content">
@@ -49,7 +51,7 @@
             </div>
         </div>
     </section>
-    <section class="about-section">
+    <section id="about" class="about-section">
         <div class="warpper">
             <div class="about-container">
                 <div class="about-content">
@@ -85,7 +87,7 @@
             </div>
         </div>
     </section>
-    <section class="testimony-section">
+    <section id="testimony" class="testimony-section">
         <div class="warpper">
             <div class="testimony-container">
                 <div class="testimony-content">
@@ -111,7 +113,7 @@
             </div>
         </div>
     </section>
-    <section class="faq-section">
+    <section id="FAQs" class="faq-section">
         <div class="warpper">
             <div class="faq-container">
                 <div class="faq-content">
@@ -128,7 +130,7 @@
             </div>
         </div>
     </section>
-     <section class="blog-section">
+     <section id="blog" class="blog-section">
         <div class="warpper">
             <div class="blog-container">
                 <div class="blog-content">
@@ -137,7 +139,7 @@
                             <span class="span-title">Dicas, ideias e inspirações para adoçar seu evento</span>
                             <h2 class="section-title">Tendências & Toques Finais</h2>
                         </div>
-                        <app-primary-button label="Explore" icon="plus"></app-primary-button>
+                        <app-primary-button (click)="goToBlog()" label="Explore" icon="plus"></app-primary-button>
                     </div>
                     <p class="section-description">
                         Aqui a gente compartilha tudo que faz sua festa brilhar ainda mais! Tendências de decoração, ideias criativas, curiosidades sobre o mundo das balas e muito mais.<b> É pra salvar nos favoritos e voltar sempre que quiser dar um up no seu evento!</b>
@@ -147,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
         <div class="warpper">
             <div class="contact-container">
                 <div class="contact-content">
@@ -186,3 +188,4 @@
         </div>
     </section>
 </main>
+<app-footer></app-footer>

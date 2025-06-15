@@ -1,0 +1,90 @@
+.section-description {
+    margin-top: 3.2rem;
+}
+.section-about-store{
+    margin-top: 6.4rem;
+}
+.about-store {
+    margin-top: 6.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    .about-store-image img {
+        width: 48.8rem;
+        height: 60rem;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+}
+.section-about-pillars {
+    background: #FDD26E;
+    padding: 6.4rem 0;
+    margin-block: 6.4rem;
+    .about-pillars {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 3.2rem;
+
+        margin-top: 3.2rem;
+
+        .pillar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.6rem;
+            padding: 1.6rem 3.2rem;
+            border-radius: 2rem;
+            .pillar-image img {
+                width: 11.8rem;
+                height: 11.8rem;
+                border-radius: 100%;
+                aspect-ratio: 1/1;
+            }
+            .pillar-content {
+                h3 {
+                    color: #333;
+                    font-family: "Baloo Thambi 2", system-ui;
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+                p {
+                    color: #333;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+        .bg-blue {
+            background: #57acef;
+            width: 100rem;
+        }
+        .bg-pink {
+            background: #e20c88;
+            .pillar-content {
+                h3 {
+                    color: #f5f5f5;
+                }
+                p {
+                    color: #f5f5f5;
+                    font-weight: 600;
+                }
+            }
+        }
+        .bg-green {
+            background: #c3f733;
+            width: 100rem;
+        }
+    }
+}
+.section-about-founders{
+    margin-bottom: 12.8rem;
+}

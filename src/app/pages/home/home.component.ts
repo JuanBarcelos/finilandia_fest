@@ -24,6 +24,10 @@ export class HomeComponent {
         this.route.navigate(['/blog']);
     };
 
+    goToAbout() {
+        this.route.navigate(['/about']);
+    }
+
     benefits: Benefit[] = [
         {
             title: 'Montagem Rápida',

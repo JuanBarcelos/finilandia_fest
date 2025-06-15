@@ -1,0 +1,45 @@
+<div class="warpper">
+    <app-navbar></app-navbar>
+</div>
+<main>
+    <div class="warpper">
+        <div class="gallery-container">
+            <span class="span-title">Confira nossas barracas em ação!</span>
+            <h1 class="section-title">Cada festa, um cenário encantador!</h1>
+            <p class="section-description">
+                Nossas barracas são mais que um detalhe — elas viram atração! Com cores vibrantes, acabamento impecável e aquele toque divertido que só a Fini tem, elas transformam qualquer evento em algo memorável.<b> Dá uma olhada nas fotos e veja como seu próximo evento pode ficar ainda mais incrível!</b>
+            </p>
+        </div>
+        <div class="gallery">
+            @for (image of imagesURLs; track $index) {
+                <div class="thumbnail" (click)="openGallery($index)">
+                    <img [src]="image" [alt]="'Image ' + ($index + 1)" />
+                </div>
+            }
+        </div>
+        @if (selectedIndex !== null) {
+            <div class="lightbox">
+                <div class="overlay"></div>
+                <div class="lightbox-content">
+                    <img
+                        [src]="imagesURLs[selectedIndex!]"
+                        [alt]="'Image ' + (selectedIndex! + 1)"
+                    />
+                    <app-btn-social-networks
+                        class="button prev"
+                        icon="caret-left"
+                        (click)="prevImage()"
+                        [disabled]="selectedIndex === 0"
+                    ></app-btn-social-networks>
+                    <app-btn-social-networks
+                        class="button next"
+                        icon="caret-right"
+                        (click)="nextImage()"
+                        [disabled]="selectedIndex === imagesURLs.length - 1"
+                    ></app-btn-social-networks>
+                </div>
+            </div>
+        }
+    </div>
+</main>
+<app-footer [isBgColor]=true></app-footer>

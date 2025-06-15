@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import type { Post } from '../../interfaces/post';
+import { Post } from '../../interfaces/post';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-blog',
@@ -8,6 +9,7 @@ import type { Post } from '../../interfaces/post';
   styleUrl: './post-blog.component.scss'
 })
 export class PostBlogComponent {
+    constructor(private route: Router) { }
     posts: Post[] = [
         {
             id: 1,
@@ -31,4 +33,9 @@ export class PostBlogComponent {
             date: '10 de Junho, 2025',
         },
     ]
+
+    viewPost(id: number) {
+        this.route.navigate(['/blog/post', id])
+    };
+
 }

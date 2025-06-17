@@ -1,0 +1,16 @@
+<div class="warpper team-cards">
+    @for (member of memberList; track $index) {
+        <div class="team-card">
+            <div class="team-card-header">
+                <img class="team-card-header-img" src={{member.imageURL}} alt={{member.name}}>
+            </div>
+            <div class="team-card-content">
+                <p>{{member.name}}</p>
+                <span>{{member.title}}</span>
+            </div>
+            <div class="team-card-footer">
+                <p>{{member.curiosity}}</p>
+            </div>
+        </div>
+    }
+</div>

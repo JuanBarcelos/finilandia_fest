@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BtnSocialNetworksComponent } from "../btn-social-networks/btn-social-networks.component";
 import { RouterLink, RouterModule } from '@angular/router';
 
@@ -9,5 +9,5 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+    @Input() isBgColor: boolean = false;
 }

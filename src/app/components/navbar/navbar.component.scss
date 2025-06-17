@@ -36,7 +36,7 @@
                 }
             }
 
-            .active{
+            .navbar-item.active{
                 padding-bottom: 0.8rem;
                 border-bottom: 2px solid #5c8bfa;
 
@@ -54,4 +54,8 @@
         gap: 1.6rem;
     }
 
+}
+
+.bg-color {
+    background: #FDD26E;
 }

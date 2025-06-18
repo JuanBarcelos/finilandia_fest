@@ -26,12 +26,12 @@
                         <b>Confira os próximos eventos ou fale com a gente e leve essa delícia pro seu também!</b>
                     </p>
                     <div class="event-calendar">
-                        <app-event-card></app-event-card>
-                        <app-event-card></app-event-card>
-                        <app-event-card></app-event-card>
-                        <app-event-card></app-event-card>
+                        <app-event-card variant="primary"></app-event-card>
+                        <app-event-card variant="primary"></app-event-card>
+                        <app-event-card variant="primary"></app-event-card>
+                        <app-event-card variant="primary"></app-event-card>
                     </div>
-                    <app-primary-button label=" Próximas Paradas!" icon="map-pin"></app-primary-button>
+                    <app-primary-button label=" Próximas Paradas!" icon="map-pin" (click)="goToEvents()"></app-primary-button>
                 </div>
                 <img class="event-image" src="home/event-section.svg" alt="balas fini">
             </div>

@@ -28,6 +28,10 @@ export class HomeComponent {
         this.route.navigate(['/about']);
     }
 
+    goToEvents() {
+        this.route.navigate(['/events']);
+    }
+
     benefits: Benefit[] = [
         {
             title: 'Montagem Rápida',

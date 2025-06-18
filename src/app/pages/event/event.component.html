@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<main>
+    <div class="warpper">
+        <div class="container">
+            <div class="title">
+                <span class="span-title">Confira quando nosso doce espetáculo está livre ou já reservado!</span>
+                <h2 class="section-title">Agenda Oficial da finilândia</h2>
+                <p class="section-description">
+                    Aqui você encontra, em um só lugar, todas as datas em que nossa barraca de balas Fini já está levando alegria — e, claro, os dias disponíveis para você garantir esse toque doce no seu evento. Navegue pelo calendário, escolha o horário ideal e deixe o resto com a gente: montagem, decoração e aquele mix irresistível de sabores.<b> Prepare seu convite, porque a diversão está prestes a chegar!</b>
+                </p>
+            </div>
+            <div class="calendar">
+                <p class="calendar-title">Confira  a semana da finilândia</p>
+                <div class="calendar-content">
+                    @for (weekDay of currentWeek; track $index) {
+                        <div class="calendar-item" (click)="selectDate(weekDay)">
+                            <div class="calendar-item-title">
+                                <h3>{{weekDay.day}}</h3>
+                            </div>
+                            <div class="calendar-item-date">
+                                <p>{{weekDay.date}}</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        @if(selectedFullDate){
+            <app-event-card variant="secondary" [date]="selectedFullDate"></app-event-card>
+        }
+    </div>
+</main>
+<app-footer [isBgColor]=true></app-footer>

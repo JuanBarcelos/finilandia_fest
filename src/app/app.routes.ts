@@ -4,6 +4,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { EventComponent } from './pages/event/event.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'gallery',
         component: GalleryComponent
+    },
+    {
+        path: 'events',
+        component: EventComponent
     }
 ];

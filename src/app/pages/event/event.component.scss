@@ -1,0 +1,61 @@
+main{
+    margin-top: 6.4rem;
+    margin-bottom: 12.8rem;
+}
+.container {
+    .calendar{
+        margin-top: 6.4rem;
+        .calendar-title{
+            color: #6E99FD;
+            font-family: "Baloo Thambi 2", system-ui;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 150%; /* 48px */
+            text-transform: uppercase;
+        }
+        .calendar-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.8rem;
+            .calendar-item{
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 1rem;
+                width: 15rem;
+                height: 15rem;
+                padding: 1.6rem .8rem;
+                border-radius: 2rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover{
+                    background: #FFF;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    color: #6E99FD;
+                }
+                .calendar-item-title{
+                    width: 100%;
+                    text-align: center;
+                    font-family: "Baloo Thambi 2", system-ui;
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+                .calendar-item-date{
+                    width: 100%;
+                    text-align: center;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 9.6rem;
+                    font-style: normal;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

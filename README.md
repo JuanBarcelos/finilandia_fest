@@ -1,59 +1,64 @@
-# PFinilandia
+# 🎉 Finilândia Fest
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+**Finilândia Fest** é um site institucional desenvolvido para apresentar a empresa especializada em barracas de balas Fini para festas e eventos. O projeto tem foco em usabilidade, performance e uma comunicação visual que transmite alegria, criatividade e acolhimento — tudo alinhado com os valores cristãos da marca.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+- [Angular 19](https://angular.io/)
+- SCSS (Sass)
+- TypeScript
+- Angular CLI
+- HTML5 + Responsividade
+- Integração com WhatsApp (link direto para atendimento)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📸 Funcionalidades e Seções
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Página inicial com chamadas para ação
+- Galeria de eventos anteriores
+- Agenda com datas disponíveis e agendadas
+- Blog com posts e dicas
+- Página “Sobre nós” com missão, visão, valores e fundadores
+- Apresentação do time
+- FAQ e formulário de contato
+- Footer com redes sociais e acesso rápido
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧑‍💻 Instalação e Execução
 
-```bash
-ng generate --help
-```
+### Pré-requisitos
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-## Building
+- [Node.js (v18 ou superior)](https://nodejs.org/)
+- [Angular CLI (v19)](https://angular.io/cli)
+- npm (gerenciador de pacotes que já vem com o Node)
 
-To build the project run:
+### Passos para rodar localmente
 
-```bash
-ng build
-```
+1. **Clone este repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/finilandia-fest.git
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. **Acesse o diretório do projeto**
+   ```bash
+   cd finilandia-fest
 
-## Running unit tests
+3. **Instale as dependências**
+   ```bash
+   npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. **Verifique se a CLI do Angular está instalada globalmente**
+   ```bash
+   ng version
 
-```bash
-ng test
-```
+5. **Inicie o servidor de desenvolvimento**
+   ```bash
+   ng serve
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+5. **Abra o navegador em:**
+   ```bash
+   http://localhost:4200

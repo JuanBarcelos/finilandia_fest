@@ -1,10 +1,11 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import type { Event } from '../../interfaces/event';
+import { PrimaryButtonComponent } from "../primary-button/primary-button.component";
 
 type EventCardProps = "primary" | "secondary" | "tertiary";
 @Component({
   selector: 'app-event-card',
-  imports: [],
+  imports: [PrimaryButtonComponent],
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.scss'
 })

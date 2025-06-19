@@ -1,34 +1,75 @@
 @if(variant === 'secondary') {
-    <div class="container">
-        <h3>{{getFormattedDate()}}</h3>
-        <div class="card-container">
-            @for (event of filteredEvents; track $index) {
-                <div class="card-secondary">
-                    <div class="card-img-secondary">
-                        <img src={{event.image}} alt={{event.name}}>
-                    </div>
-                    <div class="card-content-secondary">
-                        <p class="card-title">{{event.name}}</p>
-                        <p class="card-locale">
-                            <i class="ph ph-map-pin"></i>
-                            {{event.location}}
-                        </p>
-                    </div>
+<div class="container">
+    <h3>{{ getFormattedDate() }}</h3>
+    @if(filteredEvents.length === 0) {
+    <div class="no-events">
+        <div class="no-events-title">
+            <span class="span-title"
+                >Essa data está livre... mas não por muito tempo!</span
+            >
+            <h2 class="section-title">
+                Você acaba de encontrar um espaço perfeito para adoçar sua
+                festa!
+            </h2>
+            <p class="section-description">
+                O dia <b>{{ getFormattedDate() }}</b> ainda está livre na nossa
+                agenda — e isso pode ser o primeiro passo para um evento
+                inesquecível! Se você quer transformar esse momento em uma
+                explosão de cores, sabores e alegria com a Barraca Fini, é só
+                clicar no botão abaixo e reservar. Nós cuidamos dos detalhes
+                para que você só se preocupe em sorrir e aproveitar!
+            </p>
+        </div>
+        <app-primary-button
+            icon="whatsapp-logo"
+            label="Quero garantir minha vaga nesse dia!"
+        ></app-primary-button>
+    </div>
+    } @else {
+    <div class="card-container">
+        @for (event of filteredEvents; track $index) {
+            <div class="card-secondary">
+                <div class="card-img-secondary">
+                    <img src="{{ event.image }}" alt="{{ event.name }}" />
                 </div>
-            }
-        </div>
+                <div class="card-content-secondary">
+                    <p class="card-title">{{ event.name }}</p>
+                    <p class="card-locale">
+                        <i class="ph ph-map-pin"></i>
+                        {{ event.location }}
+                    </p>
+                </div>
+            </div>
+        }
+        @if (filteredEvents.length <= 3 && filteredEvents.length > 0) {
+            <div class="card-secondary">
+                <div class="card-content-secondary not-event">
+                    <p class="card-locale">
+                        Essa data já tem festa... mas ainda cabe mais uma!
+                    </p>
+                    <p class="card-title not-event-title">
+                        O dia está animado — e ainda pode ser seu!
+                    </p>
+                    <app-primary-button
+                        icon="whatsapp-logo"
+                        label="Quero garantir minha vaga nesse dia!"
+                    ></app-primary-button>
+                </div>
+            </div>
+        }
     </div>
-}
-@if(variant === 'primary') {
-    <div class="card">
-        <div class="card-img">
-            <p class="card-date-month">Mai</p>
-            <p class="card-date-day">25</p>
-        </div>
-        <div class="card-content">
-            <p class="card-date">25 mai, 2025</p>
-            <p class="card-title">Festa da aninha</p>
-            <p class="card-locale">Rio de Janeiro - RJ</p>
-        </div>
+    }
+</div>
+} @if(variant === 'primary') {
+<div class="card">
+    <div class="card-img">
+        <p class="card-date-month">Mai</p>
+        <p class="card-date-day">25</p>
     </div>
+    <div class="card-content">
+        <p class="card-date">25 mai, 2025</p>
+        <p class="card-title">Festa da aninha</p>
+        <p class="card-locale">Rio de Janeiro - RJ</p>
+    </div>
+</div>
 }

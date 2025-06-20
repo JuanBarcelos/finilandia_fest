@@ -79,15 +79,28 @@ table {
 }
 
 .warpper {
-    max-width: 121.6rem;
+    max-width: 112rem;
     margin: 0 auto;
     height: 100%;
 }
 
 @media screen and (600px < width < 900px ) {
-
+    .warpper {
+        max-width: 70rem;
+    }
 }
 
-@media screen and ( width >= 900px) {
-
+@media screen and ( width < 600px) {
+    .warpper {
+        max-width: 37.6rem;
+    }
+    .span-title{
+        font-size: 2rem;
+    }
+    .section-title{
+        font-size: 2.4rem;
+    }
+    .section-description{
+        font-size: 1.8rem;
+    }
 }

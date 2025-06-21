@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: #F5F5F5;
 }
 ol, ul {
 	list-style: none;
@@ -48,7 +49,7 @@ table {
 .span-title{
     font-family: "Baloo Thambi 2", system-ui;
     color: #6E99FD;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 36px */
@@ -58,7 +59,7 @@ table {
 .section-title{
     font-family: "Baloo Thambi 2", system-ui;
     color: #333;
-    font-size: 4.8rem;
+    font-size: 3.2rem;
     font-style: normal;
     font-weight: 900;
     line-height: 110%; /* 52.8px */
@@ -67,7 +68,7 @@ table {
 .section-description{
     font-family: "Open Sans", sans-serif;
     color: #333;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 36px */
@@ -95,12 +96,12 @@ table {
         max-width: 37.6rem;
     }
     .span-title{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .section-title{
         font-size: 2.4rem;
     }
     .section-description{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }

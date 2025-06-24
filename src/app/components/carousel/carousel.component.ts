@@ -100,10 +100,10 @@ export class CarouselComponent {
     }
 
     nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.groupedTestimonials.length;
+        this.currentIndex = (this.currentIndex + 1) % this.groupedTestimonials.length;
     }
 
     prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.groupedTestimonials.length) % this.groupedTestimonials.length;
+        this.currentIndex = (this.currentIndex - 1 + this.groupedTestimonials.length) % this.groupedTestimonials.length;
     }
 }

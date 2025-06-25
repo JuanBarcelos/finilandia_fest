@@ -1,8 +1,8 @@
 .section-description {
     margin-top: 3.2rem;
 }
-.section-about-store{
-    margin-top: 6.4rem;
+.section-about-store {
+    margin-top: 3.2rem;
 }
 .about-store {
     margin-top: 6.4rem;
@@ -18,7 +18,7 @@
     }
 }
 .section-about-pillars {
-    background: #FDD26E;
+    background: #fdd26e;
     padding: 6.4rem 0;
     margin-block: 6.4rem;
     .about-pillars {
@@ -85,13 +85,140 @@
         }
     }
 }
-.section-about-founders{
+.section-about-founders {
     margin-bottom: 6.4rem;
 }
-.section-about-team{
+.section-about-team {
     padding-top: 6.4rem;
     padding-bottom: 12.8rem;
-    .title{
+    .title {
         margin-bottom: 3.2rem;
+    }
+}
+
+@media screen and (600px < width < 900px) {
+    .about-store {
+        flex-direction: column;
+        .about-store-image img {
+            width: 100%;
+            height: auto;
+        }
+        .about-store-image .founders-img {
+            height: 50rem;
+        }
+    }
+    .section-about-founders {
+        margin-bottom: 4rem;
+        .about-store {
+            flex-direction: column;
+            align-items: flex-start;
+            .about-store-image .founders-img {
+                height: 50rem;
+            }
+        }
+    }
+    .section-about-team {
+        padding-top: 0rem;
+        padding-bottom: 6.4rem;
+        .title {
+            margin-bottom: 3.2rem;
+        }
+    }
+    .section-about-pillars {
+        .about-pillars {
+            align-items: center;
+            .pillar {
+                align-items: center;
+            }
+            .bg-blue {
+                width: 100%;
+            }
+            .bg-pink {
+                width: 100%;
+                .pillar-content {
+                    h3 {
+                        color: #f5f5f5;
+                    }
+                    p {
+                        color: #f5f5f5;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .bg-green {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (width < 600px) {
+    .about-store {
+        flex-direction: column;
+        .about-store-image img {
+            width: 100%;
+            height: auto;
+        }
+        .about-store-image .founders-img {
+            height: 50rem;
+        }
+    }
+    .section-about-founders {
+        margin-bottom: 4rem;
+        .about-store {
+            flex-direction: column;
+            align-items: flex-start;
+            .about-store-image .founders-img {
+                height: 50rem;
+            }
+        }
+    }
+    .section-about-team {
+        padding-top: 0rem;
+        padding-bottom: 6.4rem;
+        .title {
+            margin-bottom: 3.2rem;
+        }
+    }
+    .section-about-pillars {
+        .about-pillars {
+            align-items: center;
+            .pillar {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.6rem;
+                max-width: 35rem;
+                .pillar-image img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+                .pillar-content {
+                    h3 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .bg-blue {
+                width: 100%;
+            }
+            .bg-pink {
+                width: 100%;
+                .pillar-content {
+                    h3 {
+                        color: #f5f5f5;
+                    }
+                    p {
+                        color: #f5f5f5;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .bg-green {
+                width: 100%;
+            }
+        }
     }
 }

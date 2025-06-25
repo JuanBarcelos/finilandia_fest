@@ -1,11 +1,11 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3.2rem;
     padding-top: 3.2rem;
-    h3{
-        color: var(--color-primary, #6E99FD);
+    h3 {
+        color: var(--color-primary, #6e99fd);
         font-family: "Baloo Thambi 2", system-ui;
         font-size: 3.2rem;
         font-style: normal;
@@ -22,8 +22,8 @@
     justify-content: center;
     gap: 2rem;
 
-    .card-img{
-        padding: .8rem 1.6rem;
+    .card-img {
+        padding: 0.8rem 1.6rem;
         border-radius: 10px;
         background: #f5f5f5;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -33,19 +33,19 @@
         align-items: center;
         justify-content: center;
 
-        .card-date-month{
-            color: #6E99FD;
+        .card-date-month {
+            color: #6e99fd;
             font-family: "Baloo Thambi 2", system-ui;
             font-optical-sizing: auto;
             font-size: 2rem;
             font-style: normal;
             font-weight: 900;
             line-height: 150%; /* 1.875rem */
-            letter-spacing: .2rem;
+            letter-spacing: 0.2rem;
             text-transform: uppercase;
         }
 
-        .card-date-day{
+        .card-date-day {
             color: #333;
             font-family: "Open Sans", sans-serif;
             font-optical-sizing: auto;
@@ -53,31 +53,31 @@
             font-style: normal;
             font-weight: 800;
             line-height: 150%; /* 36px */
-            letter-spacing: .24rem;
+            letter-spacing: 0.24rem;
             text-transform: uppercase;
         }
     }
 
-    .card-content{
+    .card-content {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        gap: .4rem;
+        gap: 0.4rem;
 
-        .card-date{
-            color: #6E99FD;
+        .card-date {
+            color: #6e99fd;
             font-family: "Baloo Thambi 2", system-ui;
             font-optical-sizing: auto;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
             line-height: 150%; /* 24px */
-            letter-spacing: .16rem;
+            letter-spacing: 0.16rem;
             text-transform: uppercase;
         }
 
-        .card-title{
+        .card-title {
             color: var(--color-text, #333);
             font-family: "Baloo Thambi 2", system-ui;
             font-optical-sizing: auto;
@@ -88,7 +88,7 @@
             text-transform: uppercase;
         }
 
-        .card-locale{
+        .card-locale {
             color: #333;
             font-family: "Open Sans", sans-serif;
             font-optical-sizing: auto;
@@ -97,28 +97,26 @@
             font-weight: 300;
             line-height: 150%; /* 24px */
         }
-
-
     }
 }
 /*SECONDARY*/
-.card-container{
+.card-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     align-self: stretch;
     align-content: flex-start;
     gap: 3.2rem;
-    .card-secondary{
+    .card-secondary {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 1.6rem;
-        width: 59.2rem;
+        width: 54rem;
         color: #333;
-        .card-img-secondary{
+        .card-img-secondary {
             width: 100%;
-            img{
+            img {
                 width: 100%;
                 height: 319px;
                 align-self: stretch;
@@ -127,12 +125,12 @@
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             }
         }
-        .card-content-secondary{
+        .card-content-secondary {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: .8rem;
-            .card-title{
+            gap: 0.8rem;
+            .card-title {
                 font-family: "Baloo Thambi 2", system-ui;
                 font-optical-sizing: auto;
                 leading-trim: both;
@@ -142,35 +140,62 @@
                 font-weight: 800;
                 text-transform: capitalize;
             }
-            .card-locale{
+            .card-locale {
                 font-family: "Open Sans", sans-serif;
                 font-size: 2rem;
                 font-style: normal;
                 font-weight: 400;
             }
         }
-        .not-event{
+        .not-event {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding-block: 9.5rem;
             width: 100%;
-            app-primary-button{
+            app-primary-button {
                 margin-top: 1.6rem;
             }
-            .not-event-title{
+            .not-event-title {
                 font-size: 2.8rem;
             }
         }
     }
 }
 /*TERTIARY*/
-.no-events{
+.no-events {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
     text-align: center;
+}
+
+@media screen and (600px < width < 900px) {
+    .card-container {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        .card-secondary {
+            width: 59.2rem;
+        }
+    }
+}
+
+@media screen and (width < 600px) {
+    /*SECONDARY*/
+    .card-container {
+        .card-secondary {
+            .card-content-secondary {
+                .card-title {
+                    font-size: 3.2rem;
+                }
+                .card-locale {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
 }

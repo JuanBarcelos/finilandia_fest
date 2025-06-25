@@ -67,20 +67,43 @@ export class CarouselComponent {
     itemsPerSlide = 3;
 
     ngOnInit() {
+        this.updateItemsPerSlide();
         this.groupTestimonials();
+
+        window.addEventListener('resize', () => {
+            this.updateItemsPerSlide();
+            this.groupTestimonials();
+        });
     }
 
     groupTestimonials() {
+        this.groupedTestimonials = [];
+
         for (let i = 0; i < this.testimonials.length; i += this.itemsPerSlide) {
             this.groupedTestimonials.push(this.testimonials.slice(i, i + this.itemsPerSlide));
+        }
+
+        // Reset para evitar index inválido
+        this.currentIndex = 0;
+    }
+
+    updateItemsPerSlide() {
+        const width = window.innerWidth;
+
+        if (width <= 767) {
+            this.itemsPerSlide = 1; // mobile
+        } else if (width <= 1024) {
+            this.itemsPerSlide = 2; // tablet
+        } else {
+            this.itemsPerSlide = 3; // desktop
         }
     }
 
     nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.groupedTestimonials.length;
+        this.currentIndex = (this.currentIndex + 1) % this.groupedTestimonials.length;
     }
 
     prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.groupedTestimonials.length) % this.groupedTestimonials.length;
+        this.currentIndex = (this.currentIndex - 1 + this.groupedTestimonials.length) % this.groupedTestimonials.length;
     }
 }

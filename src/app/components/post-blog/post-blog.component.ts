@@ -32,6 +32,13 @@ export class PostBlogComponent {
             text: 'Com poucos elementos e a barraca certa, dá pra levar aquele clima de parque pra dentro de casa, salão ou até garagem. Veja nossas ideias práticas (e acessíveis) pra encantar os pequenos...',
             date: '10 de Junho, 2025',
         },
+        {
+            id: 4,
+            title: 'Como criar uma mesa de doces encantadora',
+            imageUrl: 'post/post-1.jpg',
+            text: 'Quer que sua mesa de doces vire o centro das atenções? Neste post, mostramos como combinar a barraca com decorações temáticas, balões e iluminação pra criar uma experiência mágica pra todos os convidados...',
+            date: '12 de Junho, 2025',
+        },
     ]
 
     viewPost(id: number) {

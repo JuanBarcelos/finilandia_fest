@@ -28,3 +28,12 @@ button {
          background-color: #5c8bfa;
     }
 }
+
+@media screen and (width < 600px) {
+    button {
+        font-size: 1.4rem;
+        i {
+            font-size: 1.6rem;
+        }
+    }
+}

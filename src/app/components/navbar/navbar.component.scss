@@ -10,8 +10,10 @@
         align-items: center;
         justify-content: center;
         gap: 4rem;
-
-        .navbar-menu{
+        .btn-menu {
+            display: none;
+        }
+        .navbar-menu {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,7 +38,7 @@
                 }
             }
 
-            .navbar-item.active{
+            .navbar-item.active {
                 padding-bottom: 0.8rem;
                 border-bottom: 2px solid #5c8bfa;
 
@@ -47,15 +49,82 @@
         }
     }
 
+    .navbar-mobile {
+        display: none;
+    }
+
     .navbar-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1.6rem;
     }
-
 }
 
 .bg-color {
-    background: #FDD26E;
+    background: #fdd26e;
+}
+@media screen and (width < 600px) {
+    .navbar {
+        flex-direction: column;
+        .navbar-brand {
+            width: 100%;
+            justify-content: space-between;
+            .btn-menu {
+                display: block;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                font-size: 5rem;
+                color: #5c8bfa;
+            }
+            .navbar-menu {
+                display: none;
+            }
+        }
+        .navbar-mobile.open {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            .navbar-item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: .8rem 0;
+                border-radius: 1rem;
+                color: #333;
+                &:hover {
+                    background-color: #5c8bfaa7;
+                    color: #FFF;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-family: "Open Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%; /* 1.875rem */
+                    cursor: pointer;
+                }
+            }
+
+            .navbar-item.active {
+                background-color: #5c8bfaa7;
+                color: #FFF;
+            }
+        }
+        .navbar-btn {
+            display: none;
+        }
+        .navbar-btn.open {
+            margin-top: 2rem;
+            display: flex;
+        }
+    }
 }

@@ -1,22 +1,21 @@
-.warpper {
-    max-width: 121.6rem;
-    margin: 0 auto;
-    height: 100%;
-}
 .hero-section{
     background-color: #FDD26E;
-    height: 100vh;
-
+    height: 83.2vh;
+    .warpper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .hero-container{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 3.2rem;
+        justify-content: center;
 
         .hero-content{
             color:#333;
             h1 {
-                width: 52rem;
+                width: 50rem;
+                font-size: 4.8rem;
             }
 
             p{
@@ -26,7 +25,7 @@
         }
 
         .hero-image{
-            width: 90rem;
+            width: 60rem;
         }
     }
 }
@@ -35,25 +34,21 @@
     background-color: #f5f5f5;
     height: 100vh;
     position: relative;
-
     .event-container{
         padding-block: 7.9rem;
-
         .event-content{
-            width: 86.2rem;
-            margin-top: 12.35rem;
+            width: 70rem;
             h2{
                 margin-block: 1.6rem;
             }
-
             .event-calendar{
                 display: flex;
-                width: 69.6rem;
+                width: 65rem;
                 padding: 0 1.6rem;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: flex-start;
                 align-content: flex-start;
-                row-gap: 3.2rem;
+                gap: 2rem;
                 flex-wrap: wrap;
 
                 margin-block: 3.2rem;
@@ -61,6 +56,7 @@
         }
         .event-image{
             position: absolute;
+            width: 60rem;
             right: 3.2rem;
             top: 7.9rem;
         }
@@ -101,6 +97,7 @@
 
 .cta2-section{
     background: #FDD26E;
+    margin-top: 1.6rem;
 }
 
 .about-section {
@@ -123,6 +120,7 @@
         }
         .about-image{
             position: absolute;
+            width: 100%;
             bottom: 0;
             right: 0;
         }
@@ -135,6 +133,7 @@
     .benefits-container{
         .benefits-image{
             position: absolute;
+            width: 100%;
             top: 0;
             right: 0;
         }
@@ -142,7 +141,7 @@
             position: relative;
             z-index: 1;
             .benefits-header{
-                padding-top: 26.6rem;
+                padding-top: 18rem;
                 h2{
                     margin-block: 1.6rem;
                 }
@@ -176,7 +175,7 @@
                 margin-block: 1.6rem;
             }
             p{
-                margin-bottom: 8.1rem;
+                padding-bottom: 3.2rem;
             }
         }
     }
@@ -219,9 +218,8 @@
 }
 
 .blog-section{
-    background-color: #f5f5f5;
-    height: 100vh;
-
+    height: 100%;
+    padding-block: 3.2rem;
     .blog-container{
         height: 100%;
         display: flex;
@@ -232,7 +230,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
             .blog-header{
                 width: 100%;
                 display: flex;
@@ -304,6 +301,241 @@
                                 line-height: 150%; /* 24px */
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (600px < width < 900px ) {
+    .hero-section{
+        height: 90vh;
+        .hero-container{
+            flex-direction: column;
+            .hero-content{
+                width: 100%;
+            }
+
+            .hero-image{
+                width: 70rem;
+            }
+        }
+    }
+    .event-section{
+        .event-container{
+            margin-top: 3.2rem;
+            padding-block: 0rem;
+            height: 100%;
+            .event-image{
+                position:absolute;
+                width: 60rem;
+                height: 55rem;
+                right: 5rem;
+                top: 50%;
+            }
+        }
+    }
+    .about-section {
+        height: 60vh;
+        .about-container{
+            .about-content{
+                width: 100%;
+            }
+        }
+    }
+    .benefits-section{
+        .benefits-container{
+            .benefits-content{
+                .benefits-header{
+                    padding-top: 13rem;
+                }
+                .benefits-cards{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 3.2rem;
+                    padding-bottom: 0rem;
+                }
+            }
+        }
+    }
+    .testimony-section{
+        background-color: #f5f5f5;
+        height: 90vh;
+    }
+    .cta2-section{
+        margin-top: 0rem;
+    }
+    .faq-section{
+        height: auto;
+        padding-block: 5rem;
+        .faq-container{
+            .faq-content{
+                flex-direction: column;
+            }
+        }
+    }
+    .blog-section{
+        padding-block: 6.4rem;
+    }
+    .contact-section{
+        .contact-container{
+            .contact-content{
+                flex-direction: column;
+                .contact-header{
+                    .section-description{
+                        margin-top: 1.6rem;
+                    }
+                    .contacts{
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( width < 600px) {
+    .hero-section{
+        height: 86vh;
+        padding-top: 3.2rem;
+        .warpper{
+            align-items: flex-start;
+        }
+        .hero-container{
+            flex-direction: column-reverse;
+            gap: 3.2rem;
+            .hero-content{
+                width: 100% ;
+                h1 {
+                    width: 100%;
+                    font-size: 3.2rem;
+                }
+                p{
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .hero-image{
+                width: 35rem;
+            }
+        }
+    }
+    .event-section{
+        .event-container{
+            .event-content{
+                width: 100%;
+                .event-calendar{
+                    width: 100%;
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                }
+            }
+            .event-image{
+                display: none;
+            }
+        }
+    }
+    .cta-section, .cta2-section{
+        .cta-content{
+            padding: 4.8rem 1.6rem;
+            span{
+                font-size: 1.8rem;
+                line-height: 0;
+            }
+            h2{
+                margin-block: 1.6rem;
+                font-size: 2rem;
+            }
+            p{
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
+    .about-section {
+        background-color: #FDD26E;
+        height: 70vh;
+        position: relative;
+        .about-container{
+            .about-content{
+                padding-top: 10rem;
+                width: 100%;
+                z-index: 1;
+                position: relative;
+
+                h2{
+                    margin-block: 1.6rem;
+                }
+                p{
+                    margin-bottom: 3.2rem;
+                }
+            }
+            .about-image{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    .benefits-section{
+        .benefits-container{
+            .benefits-content{
+                .benefits-header{
+                    padding-top: 8rem;
+                }
+                .benefits-cards{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.2rem;
+                }
+            }
+        }
+    }
+    .cta2-section{
+        margin-top: 0rem;
+    }
+    .faq-section{
+        height: auto;
+        padding-block: 10rem;
+        .faq-container{
+            .faq-content{
+                flex-direction: column;
+            }
+        }
+    }
+    .blog-section{
+        height: 100%;
+        .blog-container{
+            .blog-content{
+                .blog-header{
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    gap: 1.6rem;
+                }
+            }
+        }
+    }
+    .contact-section{
+        height: 100%;
+        padding-block: 3.2rem;
+        .contact-container{
+            .contact-content{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                .contact-header{
+                    width: 100%;
+                    .section-description{
+                        margin-top: 1.6rem;
                     }
                 }
             }

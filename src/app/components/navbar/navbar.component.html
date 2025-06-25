@@ -3,18 +3,99 @@
         <nav class="navbar">
             <div class="navbar-brand">
                 <div class="navbar-logo">
-                    <img src="navbar/logo.svg" alt="Logo" routerLink="/">
+                    <img src="navbar/logo.svg" alt="Logo" routerLink="/" />
                 </div>
+
+                <!-- Botão Hamburguer visível apenas em mobile -->
+                <button class="btn-menu" (click)="toggleMenu = !toggleMenu">
+                    <i [class]="!toggleMenu ? 'ph ph-list' : 'ph ph-x'"></i>
+                </button>
+
+                <!-- Menu desktop -->
                 <ul class="navbar-menu">
-                    <li class="navbar-item" routerLink="/events" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a>Eventos</a></li>
-                    <li class="navbar-item" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a>Sobre Nós</a></li>
-                    <li class="navbar-item" routerLink="/gallery" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a>Galeria</a></li>
-                    <li class="navbar-item" routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a>Blog</a></li>
+                    <li
+                        class="navbar-item"
+                        routerLink="/events"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <a>Eventos</a>
+                    </li>
+                    <li
+                        class="navbar-item"
+                        routerLink="/about"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <a>Sobre Nós</a>
+                    </li>
+                    <li
+                        class="navbar-item"
+                        routerLink="/gallery"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <a>Galeria</a>
+                    </li>
+                    <li
+                        class="navbar-item"
+                        routerLink="/blog"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <a>Blog</a>
+                    </li>
                 </ul>
             </div>
-            <div class="navbar-btn">
-                <app-btn-social-networks imageURL="facebook.svg" imageAlt="Logo do facebook"></app-btn-social-networks>
-                <app-btn-social-networks icon="instagram-logo" classColor="color-icon" [classIcon]=true></app-btn-social-networks>
+
+            <!-- Menu mobile -->
+
+            <ul class="navbar-mobile" [class.open]="toggleMenu">
+                <li
+                    class="navbar-item"
+                    routerLink="/events"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <a>Eventos</a>
+                </li>
+                <li
+                    class="navbar-item"
+                    routerLink="/about"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <a>Sobre Nós</a>
+                </li>
+                <li
+                    class="navbar-item"
+                    routerLink="/gallery"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <a>Galeria</a>
+                </li>
+                <li
+                    class="navbar-item"
+                    routerLink="/blog"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <a>Blog</a>
+                </li>
+            </ul>
+
+            <!-- Botões -->
+            <div class="navbar-btn" [class.open]="toggleMenu">
+                <app-btn-social-networks
+                    imageURL="facebook.svg"
+                    imageAlt="Logo do facebook"
+                ></app-btn-social-networks>
+                <app-btn-social-networks
+                    icon="instagram-logo"
+                    classColor="color-icon"
+                    [classIcon]="true"
+                ></app-btn-social-networks>
             </div>
         </nav>
     </div>

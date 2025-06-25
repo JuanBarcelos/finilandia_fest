@@ -10,4 +10,5 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
     @Input() isBgColor: boolean = false;
+    toggleMenu: boolean = false;
 }

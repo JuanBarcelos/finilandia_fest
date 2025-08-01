@@ -1,17 +1,28 @@
-<app-navbar [isBgColor]=true></app-navbar>
+<app-navbar [isBgColor]="true"></app-navbar>
 <main>
     <section class="hero-section">
         <div class="warpper">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="section-title">A barraca mais doce da festa chegou!</h1>
+                    <h1 class="section-title">
+                        A barraca mais doce da festa chegou!
+                    </h1>
                     <p class="section-description">
-                        Surpreenda seus convidados com uma explosão de cores, sabores e alegria com nossas <b> barracas exclusivas de Balas Fini! </b>
+                        Surpreenda seus convidados com uma explosão de cores,
+                        sabores e alegria com nossas
+                        <b> barracas exclusivas de Balas Fini! </b>
                     </p>
                     <!-- <a href="" class="btn">Learn More</a> -->
-                    <app-primary-button label="Bora de Fini!" [isClick]=true></app-primary-button>
+                    <app-primary-button
+                        label="Bora de Fini!"
+                        [isClick]="true"
+                    ></app-primary-button>
                 </div>
-                <img class="hero-image" src="home/hero-section.svg" alt="doces fini">
+                <img
+                    class="hero-image"
+                    src="home/hero-section.svg"
+                    alt="doces fini"
+                />
             </div>
         </div>
     </section>
@@ -19,21 +30,59 @@
         <div class="warpper">
             <div class="event-container">
                 <div class="event-content">
-                    <span class="span-title">Tem Fini Chegando Perto de Você!</span>
-                    <h2 class="section-title">A Barraca Que Vira Ponto de Encontro!</h2>
+                    <span class="span-title"
+                        >Tem Fini Chegando Perto de Você!</span
+                    >
+                    <h2 class="section-title">
+                        A Barraca Que Vira Ponto de Encontro!
+                    </h2>
                     <p class="section-description">
-                        Seja em aniversários, casamentos ou eventos corporativos, nossa barraca de Balas Fini é a estrela que conquista adultos e crianças! Quer ver de perto essa explosão de alegria?
-                        <b>Confira os próximos eventos ou fale com a gente e leve essa delícia pro seu também!</b>
+                        Seja em aniversários, casamentos ou eventos
+                        corporativos, nossa barraca de Balas Fini é a estrela
+                        que conquista adultos e crianças! Quer ver de perto essa
+                        explosão de alegria?
+                        <b
+                            >Confira os próximos eventos ou fale com a gente e
+                            leve essa delícia pro seu também!</b
+                        >
                     </p>
                     <div class="event-calendar">
-                        <app-event-card variant="primary"></app-event-card>
-                        <app-event-card variant="primary"></app-event-card>
-                        <app-event-card variant="primary"></app-event-card>
-                        <app-event-card variant="primary"></app-event-card>
+                        <app-event-card
+                            variant="primary"
+                            month="AGO"
+                            day="01"
+                            fullDay="01 Agosto, 2025"
+                            eventTitle="Festa da Karoline"
+                            eventLocale="Nilópolis - RJ"
+                        ></app-event-card>
+                        <app-event-card
+                            variant="primary"
+                            month="AGO"
+                            day="02"
+                            fullDay="02 Agosto, 2025"
+                            eventTitle="Festa da Vanessa"
+                            eventLocale="Bangu - RJ"
+                        ></app-event-card>
+                        <app-event-card
+                            variant="primary"
+                            month="AGO"
+                            day="08"
+                            fullDay="08 Agosto, 2025"
+                            eventTitle="Festa da Renata Tannuri"
+                            eventLocale="Barra da Tijuca - RJ"
+                        ></app-event-card>
                     </div>
-                    <app-primary-button label=" Próximas Paradas!" icon="map-pin" (click)="goToEvents()"></app-primary-button>
+                    <app-primary-button
+                        label=" Próximas Paradas!"
+                        icon="map-pin"
+                        (click)="goToEvents()"
+                    ></app-primary-button>
                 </div>
-                <img class="event-image" src="home/event-section.svg" alt="balas fini">
+                <img
+                    class="event-image"
+                    src="home/event-section.svg"
+                    alt="balas fini"
+                />
             </div>
         </div>
     </section>
@@ -41,11 +90,20 @@
         <div class="warpper">
             <div class="cta-content">
                 <span class="span-title">Vamos conversar rapidinho?</span>
-                <h2 class="section-title">Seu evento com gostinho de Fini <br> começa com um “Oi”!</h2>
+                <h2 class="section-title">
+                    Seu evento com gostinho de Fini <br />
+                    começa com um “Oi”!
+                </h2>
                 <p class="section-description">
-                    Quer saber como levar a barraca Fini pra sua festa? É só mandar um "oi" pra gente no Whats e rapidinho a gente adoça seu evento com todas as infos que você precisa!
+                    Quer saber como levar a barraca Fini pra sua festa? É só
+                    mandar um "oi" pra gente no Whats e rapidinho a gente adoça
+                    seu evento com todas as infos que você precisa!
                 </p>
-                <app-primary-button label="Chama no Whats" icon="whatsapp-logo" [isClick]=true></app-primary-button>
+                <app-primary-button
+                    label="Chama no Whats"
+                    icon="whatsapp-logo"
+                    [isClick]="true"
+                ></app-primary-button>
             </div>
         </div>
     </section>
@@ -54,31 +112,59 @@
             <div class="about-container">
                 <div class="about-content">
                     <span class="span-title">Quem tá por trás da barraca?</span>
-                    <h2 class="section-title">Conheça a história (doce) por trás da nossa barraca!</h2>
+                    <h2 class="section-title">
+                        Conheça a história (doce) por trás da nossa barraca!
+                    </h2>
                     <p class="section-description">
-                        A gente não vende só balas — a gente espalha alegria por onde passa! Quer saber como tudo começou, quem somos e por que nossa barraca faz tanto sucesso nas festas? <b> Vem conhecer nossa trajetória e se encantar com a gente!</b>
+                        A gente não vende só balas — a gente espalha alegria por
+                        onde passa! Quer saber como tudo começou, quem somos e
+                        por que nossa barraca faz tanto sucesso nas festas?
+                        <b>
+                            Vem conhecer nossa trajetória e se encantar com a
+                            gente!</b
+                        >
                     </p>
-                    <app-primary-button label="Conheça nossa história" (click)="goToAbout()"></app-primary-button>
+                    <app-primary-button
+                        label="Conheça nossa história"
+                        (click)="goToAbout()"
+                    ></app-primary-button>
                 </div>
-                <img class="about-image" src="home/about-section.svg" alt="balas fini">
+                <img
+                    class="about-image"
+                    src="home/about-section.svg"
+                    alt="balas fini"
+                />
             </div>
         </div>
     </section>
     <section class="benefits-section">
         <div class="warpper">
             <div class="benefits-container">
-                <img class="benefits-image" src="home/benefits/benefits-section.svg" alt="balas fini">
+                <img
+                    class="benefits-image"
+                    src="home/benefits/benefits-section.svg"
+                    alt="balas fini"
+                />
                 <div class="benefits-content">
                     <div class="benefits-header">
-                        <span class="span-title">Mais que uma barraca, uma experiência!</span>
-                        <h2 class="section-title">Por que a nossa barraca é o destaque da festa?</h2>
+                        <span class="span-title"
+                            >Mais que uma barraca, uma experiência!</span
+                        >
+                        <h2 class="section-title">
+                            Por que a nossa barraca é o destaque da festa?
+                        </h2>
                         <p class="section-description">
-                            Não é só uma barraca de doces, é uma experiência que encanta crianças e adultos! Descubra por que a nossa estrutura é sempre um sucesso nas festas mais animadas da cidade:
+                            Não é só uma barraca de doces, é uma experiência que
+                            encanta crianças e adultos! Descubra por que a nossa
+                            estrutura é sempre um sucesso nas festas mais
+                            animadas da cidade:
                         </p>
                     </div>
                     <div class="benefits-cards">
                         @for (benefit of benefits; track $index) {
-                            <app-benefit-card [benefit]="benefit"></app-benefit-card>
+                        <app-benefit-card
+                            [benefit]="benefit"
+                        ></app-benefit-card>
                         }
                     </div>
                 </div>
@@ -89,10 +175,19 @@
         <div class="warpper">
             <div class="testimony-container">
                 <div class="testimony-content">
-                    <span class="span-title">Quem já viveu essa doçura fala por si!</span>
-                    <h2 class="section-title">O que dizem sobre a experiência <br>com a nossa barraca?</h2>
+                    <span class="span-title"
+                        >Quem já viveu essa doçura fala por si!</span
+                    >
+                    <h2 class="section-title">
+                        O que dizem sobre a experiência <br />com a nossa
+                        barraca?
+                    </h2>
                     <p class="section-description">
-                        Cada festa é única, mas tem uma coisa que todas têm em comum: convidados encantados! Dá uma olhada no que quem já contratou a nossa barraca tem a dizer.<b>Spoiler: é só amor (e muita bala Fini)!</b>
+                        Cada festa é única, mas tem uma coisa que todas têm em
+                        comum: convidados encantados! Dá uma olhada no que quem
+                        já contratou a nossa barraca tem a dizer.<b
+                            >Spoiler: é só amor (e muita bala Fini)!</b
+                        >
                     </p>
                     <app-carousel></app-carousel>
                 </div>
@@ -102,12 +197,23 @@
     <section class="cta2-section">
         <div class="warpper">
             <div class="cta-content">
-                <span class="span-title">Bateu aquela vontade de uma festa com gostinho de Fini?</span>
-                <h2 class="section-title">Fala com a gente no Whats e bora adoçar sua festa!</h2>
+                <span class="span-title"
+                    >Bateu aquela vontade de uma festa com gostinho de
+                    Fini?</span
+                >
+                <h2 class="section-title">
+                    Fala com a gente no Whats e bora adoçar sua festa!
+                </h2>
                 <p class="section-description">
-                    Quer saber preços, datas ou como levar a barraca mais divertida da cidade pro seu evento? É rapidinho: chama no zap e a gente responde com todo carinho!
+                    Quer saber preços, datas ou como levar a barraca mais
+                    divertida da cidade pro seu evento? É rapidinho: chama no
+                    zap e a gente responde com todo carinho!
                 </p>
-                <app-primary-button label="Me chama no Whats" icon="whatsapp-logo" [isClick]=true></app-primary-button>
+                <app-primary-button
+                    label="Me chama no Whats"
+                    icon="whatsapp-logo"
+                    [isClick]="true"
+                ></app-primary-button>
             </div>
         </div>
     </section>
@@ -116,12 +222,24 @@
             <div class="faq-container">
                 <div class="faq-content">
                     <div class="faq-header">
-                        <span class="span-title">Tem dúvidas? A gente adoça as respostas!</span>
-                        <h2 class="section-title">Perguntas frequentes sobre nossa barraca e como contratar</h2>
+                        <span class="span-title"
+                            >Tem dúvidas? A gente adoça as respostas!</span
+                        >
+                        <h2 class="section-title">
+                            Perguntas frequentes sobre nossa barraca e como
+                            contratar
+                        </h2>
                         <p class="section-description">
-                            Separamos as dúvidas que mais recebemos pra te ajudar a decidir com tranquilidade (e com água na boca ). Mas se a sua pergunta não estiver aqui, é só chamar a gente no Whats!
+                            Separamos as dúvidas que mais recebemos pra te
+                            ajudar a decidir com tranquilidade (e com água na
+                            boca ). Mas se a sua pergunta não estiver aqui, é só
+                            chamar a gente no Whats!
                         </p>
-                        <app-primary-button label="Me chama no Whats" icon="whatsapp-logo" [isClick]=true></app-primary-button>
+                        <app-primary-button
+                            label="Me chama no Whats"
+                            icon="whatsapp-logo"
+                            [isClick]="true"
+                        ></app-primary-button>
                     </div>
                     <app-faqs></app-faqs>
                 </div>
@@ -134,13 +252,27 @@
                 <div class="blog-content">
                     <div class="blog-header">
                         <div>
-                            <span class="span-title">Dicas, ideias e inspirações para adoçar seu evento</span>
-                            <h2 class="section-title">Tendências & Toques Finais</h2>
+                            <span class="span-title"
+                                >Dicas, ideias e inspirações para adoçar seu
+                                evento</span
+                            >
+                            <h2 class="section-title">
+                                Tendências & Toques Finais
+                            </h2>
                         </div>
-                        <app-primary-button (click)="goToBlog()" label="Explore" icon="plus"></app-primary-button>
+                        <app-primary-button
+                            (click)="goToBlog()"
+                            label="Explore"
+                            icon="plus"
+                        ></app-primary-button>
                     </div>
                     <p class="section-description">
-                        Aqui a gente compartilha tudo que faz sua festa brilhar ainda mais! Tendências de decoração, ideias criativas, curiosidades sobre o mundo das balas e muito mais.<b> É pra salvar nos favoritos e voltar sempre que quiser dar um up no seu evento!</b>
+                        Aqui a gente compartilha tudo que faz sua festa brilhar
+                        ainda mais! Tendências de decoração, ideias criativas,
+                        curiosidades sobre o mundo das balas e muito mais.<b>
+                            É pra salvar nos favoritos e voltar sempre que
+                            quiser dar um up no seu evento!</b
+                        >
                     </p>
                 </div>
                 <app-post-blog></app-post-blog>
@@ -153,10 +285,18 @@
                 <div class="contact-content">
                     <div class="contact-header">
                         <div>
-                            <span class="span-title">Ficou com dúvidas ou já quer reservar?</span>
-                            <h2 class="section-title">Vamos conversar e adoçar seu evento!</h2>
+                            <span class="span-title"
+                                >Ficou com dúvidas ou já quer reservar?</span
+                            >
+                            <h2 class="section-title">
+                                Vamos conversar e adoçar seu evento!
+                            </h2>
                             <p class="section-description">
-                                Estamos prontos pra tirar suas dúvidas, montar um orçamento rapidinho ou ajudar você a planejar a festa perfeita com a nossa barraca! É só preencher o formulário ou chamar direto no WhatsApp — vai ser um prazer te atender.
+                                Estamos prontos pra tirar suas dúvidas, montar
+                                um orçamento rapidinho ou ajudar você a planejar
+                                a festa perfeita com a nossa barraca! É só
+                                preencher o formulário ou chamar direto no
+                                WhatsApp — vai ser um prazer te atender.
                             </p>
                         </div>
                         <div class="contacts">

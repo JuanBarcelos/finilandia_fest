@@ -14,11 +14,11 @@ export class FaqsComponent implements OnInit{
     faqs = [
         {
             title: "Quanto tempo antes preciso reservar a barraca?",
-            describe: 'O ideal é com pelo menos 15 dias de antecedência, principalmente em meses de alta demanda. Mas se tiver uma data em mente, já chama a gente pra garantir!'
+            describe: 'O ideal é com pelo menos 30 dias de antecedência, principalmente em meses de alta demanda. Mas se tiver uma data em mente, já chama a gente pra garantir!'
         },
         {
             title: "Vocês atendem festas em outras cidades?",
-            describe: 'Atendemos sim! Dependendo da distância, pode haver uma taxa de deslocamento — mas fazemos de tudo pra levar nossa barraca até você. Fala com a gente pra consultar!'
+            describe: 'Atendemos sim, em diversas cidades do Rio de Janeiro! Algumas regiões podem ter taxa de deslocamento, e em certos casos, o atendimento pode não ser possível. Fala com a gente pra consultar se conseguimos levar nossa barraca até você!'
         },
         {
             title: "A montagem da barraca está inclusa no valor?",
@@ -26,7 +26,7 @@ export class FaqsComponent implements OnInit{
         },
         {
             title: "Tem opção de barraca personalizada?",
-            describe: 'Temos sim! Dá pra personalizar detalhes como cores, plaquinhas e até o mix de balas — tudo pra deixar sua festa com a sua cara (e muito mais doce!).'
+            describe: 'Temos sim! Embora não façamos barracas personalizadas, contamos com várias opções em diferentes cores. Também dá pra escolher o mix de balas — tudo pra deixar sua festa com a sua cara (e muito mais doce!). Fala com a gente pra saber quais cores estão disponíveis!'
         },
     ];
 

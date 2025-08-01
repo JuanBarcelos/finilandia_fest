@@ -45,10 +45,11 @@
                 display: flex;
                 width: 65rem;
                 padding: 0 1.6rem;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: flex-start;
                 align-content: flex-start;
-                gap: 2rem;
+                column-gap: 2rem;
+                row-gap: 2rem;
                 flex-wrap: wrap;
 
                 margin-block: 3.2rem;

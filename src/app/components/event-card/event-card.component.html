@@ -42,7 +42,7 @@
                 </div>
             </div>
         }
-        @if (filteredEvents.length <= 3 && filteredEvents.length > 0) {
+        @if (filteredEvents.length <= 2 && filteredEvents.length > 0) {
             <div class="card-secondary">
                 <div class="card-content-secondary not-event">
                     <p class="card-locale">
@@ -63,15 +63,15 @@
     }
 </div>
 } @if(variant === 'primary') {
-<div class="card">
-    <div class="card-img">
-        <p class="card-date-month">Mai</p>
-        <p class="card-date-day">25</p>
+    <div class="card">
+        <div class="card-img">
+            <p class="card-date-month">{{month}}</p>
+            <p class="card-date-day">{{day}}</p>
+        </div>
+        <div class="card-content">
+            <p class="card-date">{{fullDay}}</p>
+            <p class="card-title">{{eventTitle}}</p>
+            <p class="card-locale">{{eventLocale}}</p>
+        </div>
     </div>
-    <div class="card-content">
-        <p class="card-date">25 mai, 2025</p>
-        <p class="card-title">Festa da aninha</p>
-        <p class="card-locale">Rio de Janeiro - RJ</p>
-    </div>
-</div>
 }

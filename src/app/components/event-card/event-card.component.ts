@@ -11,79 +11,57 @@ type EventCardProps = "primary" | "secondary" | "tertiary";
 })
 export class EventCardComponent implements OnChanges {
     @Input() variant: EventCardProps = "primary";
+    @Input() month: string = '';
+    @Input() day: string = '';
+    @Input() fullDay: string = '';
+    @Input() eventTitle: string = '';
+    @Input() eventLocale: string = '';
+
     @Input() date!: Date;
 
     eventList: Event[] =  [
         {
             id: 1,
-            name: 'Festa da Aninha',
-            date: '19 Junho, 2025',
-            location: 'Rio de Janeiro - RJ',
+            name: 'Festa da Karoline',
+            date: '1 Agosto, 2025',
+            location: 'Nilópolis - RJ',
             image: 'https://picsum.photos/600/400?random=1'
         },
         {
             id: 2,
-            name: 'Congresso Regional',
-            date: '19 Junho, 2025',
-            location: 'São Paulo - SP',
+            name: 'Festa da Vanessa',
+            date: '2 Agosto, 2025',
+            location: 'Bangu - RJ',
             image: 'https://picsum.photos/600/400?random=2'
         },
         {
             id: 3,
-            name: 'Culto Jovem',
-            date: '19 Junho, 2025',
-            location: 'Belo Horizonte - MG',
+            name: 'Festa da Renata Tannuri',
+            date: '8 Agosto, 2025',
+            location: 'Barra da Tijuca - RJ',
             image: 'https://picsum.photos/600/400?random=3'
         },
         {
             id: 4,
-            name: 'Noite de Louvor',
-            date: '20 Junho, 2025',
-            location: 'Curitiba - PR',
+            name: 'Festa da Tuane',
+            date: '9 Agosto, 2025',
+            location: 'Ilha do Governador - RJ',
             image: 'https://picsum.photos/600/400?random=4'
         },
         {
             id: 5,
-            name: 'Palestra com Pr. João',
-            date: '20 Junho, 2025',
-            location: 'Fortaleza - CE',
+            name: 'Festa da Sabrina',
+            date: '13 Agosto, 2025',
+            location: 'Ilha do Governador - RJ',
             image: 'https://picsum.photos/600/400?random=5'
         },
         {
             id: 6,
-            name: 'Retiro Espiritual',
-            date: '21 Junho, 2025',
-            location: 'Gramado - RS',
+            name: 'Festa da Gisane Dias',
+            date: '30 Agosto, 2025',
+            location: 'Nova Iguaçu - RJ',
             image: 'https://picsum.photos/600/400?random=6'
         },
-        {
-            id: 7,
-            name: 'Aniversário da Igreja',
-            date: '21 Junho, 2025',
-            location: 'Recife - PE',
-            image: 'https://picsum.photos/600/400?random=7'
-        },
-        {
-            id: 8,
-            name: 'Seminário para Líderes',
-            date: '23 Junho, 2025',
-            location: 'Salvador - BA',
-            image: 'https://picsum.photos/600/400?random=8'
-        },
-        {
-            id: 9,
-            name: 'Encontro de Casais',
-            date: '27 Junho, 2025',
-            location: 'Natal - RN',
-            image: 'https://picsum.photos/600/400?random=9'
-        },
-        {
-            id: 10,
-            name: 'Ação Social',
-            date: '28 Junho, 2025',
-            location: 'Porto Alegre - RS',
-            image: 'https://picsum.photos/600/400?random=10'
-        }
     ];
 
     filteredEvents: any[] = [];
